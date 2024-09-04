@@ -6,14 +6,16 @@ const mongoose = require("mongoose");
 
  
 
-mongoose.connect("mongodb://127.0.0.1:27017/mydatabase",
-        
+mongoose.connect(//"mongodb://127.0.0.1:27017/mydatabase",
+                   mongoUrl,
     {
          useNewUrlParser: true,
           useUnifiedTopology: true
     }
 
 );
+
+const mongoUrl = "mongodb+srv://raghukulayush003:shivpal@9569@cluster0.mrr6c.mongodb.net/"
 
 // Handle Connection Event 
 
