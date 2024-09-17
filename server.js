@@ -7,13 +7,15 @@
 const express = require('express')
 const app = express()
  const db = require('./data');
- 
+
  
  const Course = require('./Models/course');
 
  const bodyParser = require('body-parser');
 
  app.use(bodyParser.json());
+
+ const PORT = process.env.PORT || 3000;
 
 //   Lect no:- 7
 
@@ -93,7 +95,7 @@ app.get("/course", async(req, res)=>{
 
 
 
-app.listen(3000, ()=>{
+app.listen(PORT, ()=>{
   console.log("listening to the server on the port 3000");
 });
 

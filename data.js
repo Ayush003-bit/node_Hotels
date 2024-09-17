@@ -1,13 +1,19 @@
 
 const mongoose = require("mongoose");
+require('dotenv').config();
+  
 
 
 // connect to mongoDB
 
  
+//const mongoUrl =  "mongodb+srv://raghukulayush003:Shivpal9569@cluster0.mrr6c.mongodb.net/";
+// const mongoUrl = process.env.DB_URL_LOCAL;
 
-mongoose.connect(//"mongodb://127.0.0.1:27017/mydatabase",
-                   mongoUrl,
+const mongoUrl = process.env.DB_URL;
+
+
+mongoose.connect( mongoUrl,
     {
          useNewUrlParser: true,
           useUnifiedTopology: true
@@ -15,7 +21,7 @@ mongoose.connect(//"mongodb://127.0.0.1:27017/mydatabase",
 
 );
 
-const mongoUrl = "mongodb+srv://raghukulayush003:shivpal@9569@cluster0.mrr6c.mongodb.net/"
+
 
 // Handle Connection Event 
 
