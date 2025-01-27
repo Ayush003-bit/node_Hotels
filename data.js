@@ -8,14 +8,14 @@ require('dotenv').config();
 
  
 //const mongoUrl =  "mongodb+srv://raghukulayush003:Shivpal9569@cluster0.mrr6c.mongodb.net/";
-// const mongoUrl = process.env.DB_URL_LOCAL;
+ const mongoUrl = process.env.DB_URL_LOCAL;
 
-const mongoUrl = process.env.DB_URL;
+// const mongoUrl = process.env.DB_URL;
 
 
 mongoose.connect( mongoUrl,
     {
-         useNewUrlParser: true,
+        useNewUrlParser: true,
           useUnifiedTopology: true
     }
 
@@ -45,3 +45,13 @@ mongoose.connect( mongoUrl,
   // Export database conncetion
 
   module.exports = db;
+  
+  
+ // async () =>{
+ //     try {
+  //        await mongoose.connect(mongoUrl, {});
+  //        console.log("Connected to MongoDB Successfully");
+   //   }  catch(error) {
+     //     console.error("MongoDB connection Error", err);
+    //  }
+ // };
