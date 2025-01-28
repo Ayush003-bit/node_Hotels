@@ -21,6 +21,8 @@
         }
     })
 
+    // getting data from the server
+
     router.get("/", async(req, res)=>{
           try{
                 const CitiesData =  await Cities.find();
@@ -31,6 +33,8 @@
                 res.status(500).json({error: "Internal Server Error"});
           }
     })
+
+    // modifying data of the database
 
     router.put("/:id", async(req, res)=>{
         try{
@@ -53,6 +57,8 @@
               res.status(500).json({error: "Internal Server Error"});
         }
     })
+
+    // Deleting Data of the database
 
     router.delete("/:id", async(req, res)=>{
          try{
