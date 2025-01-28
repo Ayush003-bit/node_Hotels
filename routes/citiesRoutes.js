@@ -5,6 +5,7 @@
     const BodyParser = require("body-parser");
     router.use(BodyParser.json());
 
+//  Posting data to the database
 
     router.post("/", async(req, res)=>{
         try {
